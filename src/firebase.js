@@ -2,8 +2,9 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyCdxxvl5Ir0VHVlm62Gi_cXRTEbYots620",
   authDomain: "chat-app-web-eec6e.firebaseapp.com",
@@ -18,3 +19,5 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Firestore database
 export const db = getFirestore(app);
+export const auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
